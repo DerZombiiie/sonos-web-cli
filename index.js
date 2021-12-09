@@ -165,7 +165,7 @@ async function install() {
   let result = shell.mkdir(installPath);
   if (result.code !== 0 && result.stderr.startsWith("mkdir: path already exists")) {
     logError(`Directory ${installPath} allready exists (removing & recreating)`);
-    shell.rm("-r", installPath);
+    shell.rm("-rf", installPath);
     shell.mkdir(installPath);
   } else {
     logError('Could not create install directory');
