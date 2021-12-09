@@ -168,7 +168,7 @@ async function install() {
   }
 
   spinner.start('downloading installation files');
-  download('Villarrealized/sonos-web', installPath, async (err) => {
+  download('DerZombiiie/sonos-web', installPath, async (err) => {
     // clear log file
     fs.writeFile(installLogFile, '');
 
