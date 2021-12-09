@@ -163,7 +163,7 @@ async function install() {
 
   console.log(`Installing ${colors.bold.yellow('Sonos Web')}`);
   let result = shell.mkdir(installPath);
-  if (result.code !== 0; result.stderr.startsWith("mkdir: path already exists")) {
+  if (result.code !== 0 && result.stderr.startsWith("mkdir: path already exists")) {
     logError(`Directory ${installPath} allready exists (removing & recreating)`);
     shell.rm("-r", installPath);
     shell.mkdir(installPath);
